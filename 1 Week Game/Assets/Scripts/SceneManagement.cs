@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneManagement : MonoBehaviour
 {
 
-    public GameObject goodButton, badButton, canvas;
+    public GameObject goodButton, badButton, canvas, result;
     public string sceneName;
 
     // Start is called before the first frame update
@@ -27,10 +27,39 @@ public class SceneManagement : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             canvas.SetActive(true);
+            result.SetActive(false);
         }
     }
 
     public void goodOption()
+    {
+        if (sceneName == "Starting Scene")
+        {
+            SceneManager.LoadScene(3);
+        }
+
+        if (sceneName == "1Good")
+        {
+            SceneManager.LoadScene(5);
+        }
+
+        if (sceneName == "2Good")
+        {
+            SceneManager.LoadScene(6);
+        }
+
+        if (sceneName == "1Bad")
+        {
+            SceneManager.LoadScene(5);
+        }
+
+        if (sceneName == "2Bad")
+        {
+            SceneManager.LoadScene(6);
+        }
+    }
+
+    public void badOption()
     {
         if (sceneName == "Starting Scene")
         {
@@ -44,7 +73,7 @@ public class SceneManagement : MonoBehaviour
 
         if (sceneName == "2Good")
         {
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(6);
         }
 
         if (sceneName == "1Bad")
@@ -54,35 +83,7 @@ public class SceneManagement : MonoBehaviour
 
         if (sceneName == "2Bad")
         {
-            SceneManager.LoadScene(5);
-        }
-    }
-
-    public void badOption()
-    {
-        if (sceneName == "Starting Scene")
-        {
-            SceneManager.LoadScene(1);
-        }
-
-        if (sceneName == "1Good")
-        {
-            SceneManager.LoadScene(3);
-        }
-
-        if (sceneName == "2Good")
-        {
-            SceneManager.LoadScene(5);
-        }
-
-        if (sceneName == "1Bad")
-        {
-            SceneManager.LoadScene(3);
-        }
-
-        if (sceneName == "2Bad")
-        {
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(6);
         }
     }
 }
