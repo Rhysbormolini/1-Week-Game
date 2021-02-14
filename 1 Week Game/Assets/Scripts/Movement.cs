@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     public float walkSpeed;
     private bool facingRight = true;
+    public Animator runningMan;
 
     private void FixedUpdate()
     {
@@ -14,12 +15,20 @@ public class Movement : MonoBehaviour
         if (move < 0)
         {
             GetComponent<Rigidbody2D>().velocity = new Vector3(move * walkSpeed, GetComponent<Rigidbody2D>().velocity.y);
+            runningMan.SetBool("isWalking", true);
         }
 
         if (move > 0)
         {
             GetComponent<Rigidbody2D>().velocity = new Vector3(move * walkSpeed, GetComponent<Rigidbody2D>().velocity.y);
+            runningMan.SetBool("isWalking", true);
         }
+
+        else if (move == 0)
+        {
+            runningMan.SetBool("isWalking", false);
+        }
+
 
         if (facingRight == false && move > 0)
         {
