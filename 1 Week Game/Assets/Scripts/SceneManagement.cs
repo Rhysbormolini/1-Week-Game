@@ -45,7 +45,7 @@ public class SceneManagement : MonoBehaviour
 
         if (sceneName == "2Good")
         {
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene(7);
         }
 
         if (sceneName == "1Bad")
@@ -55,7 +55,7 @@ public class SceneManagement : MonoBehaviour
 
         if (sceneName == "2Bad")
         {
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene(7);
         }
     }
 

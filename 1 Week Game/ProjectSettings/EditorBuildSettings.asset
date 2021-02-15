@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Third Choice/2Good.unity
     guid: 9c5cd4eff96c985499c0e56cba404ac7
   - enabled: 1
-    path: Assets/Scenes/Final Scene.unity
+    path: Assets/Scenes/Final Scene's/3Bad.unity
     guid: 27b71527a906c5e4b8cf22dd78eece1b
+  - enabled: 1
+    path: Assets/Scenes/Final Scene's/3Good.unity
+    guid: 8e77474abf47f124cab302a976c53cb5
   m_configObjects: {}
