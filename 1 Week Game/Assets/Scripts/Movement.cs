@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     private bool facingRight = true;
     public Animator runningMan;
 
+    
     private void FixedUpdate()
     {
         float move = Input.GetAxis("Horizontal");
